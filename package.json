@@ -2,7 +2,7 @@
   "name": "angularjs-webpack-boilerplate",
   "description": "boilerplate for angularjs 1.x component architecture build with webpack",
   "version": "1.0.0",
-  "author": "Daniel Schranc",
+  "author": "Daniel Schranc, Dmytro Holysh",
   "license": "MIT",
   "keywords": [
     "ES6",
@@ -11,23 +11,23 @@
     "component",
     "class"
   ],
-  "repository": "git+https://github.com/DanielSchranc/angularjs-webpack-boilerplate.git",
+  "repository": "git+https://github.com/dmk1111/angularjs-webpack-boilerplate.git",
   "bugs": {
-    "url": "https://github.com/DanielSchranc/angularjs-webpack-boilerplate/issues"
+    "url": "https://github.com/dmk1111/angularjs-webpack-boilerplate/issues"
   },
-  "homepage": "https://github.com/DanielSchranc/angularjs-webpack-boilerplate#readme",
+  "homepage": "https://github.com/dmk1111/angularjs-webpack-boilerplate#readme",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p",
-    "build:dev": "cross-env NODE_ENV=development webpack-dev-server",
     "build:prod": "npm run clean && npm run build",
-    "clean": "rimraf build",
-    "start": "npm run build:dev"
+    "clean": "rimraf dist",
+    "start": "npm run start:dev",
+    "start:dev": "cross-env NODE_ENV=development webpack-dev-server"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
     "@babel/runtime-corejs2": "^7.0.0",
-    "@uirouter/angularjs": "^1.0.20",
-    "angular": "^1.7.3",
+    "@uirouter/angularjs": "^1.0.22",
+    "angular": "^1.7.8",
     "angular-loading-bar": "^0.9.0",
     "webpack-cli": "^3.1.0"
   },

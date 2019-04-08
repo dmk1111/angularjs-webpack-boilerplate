@@ -59,7 +59,7 @@ const plugins = [
   }),
   new HtmlWebpackPlugin({
     minify: false,
-    template: path.join(__dirname, 'src/template/index.html'),
+    template: path.join(__dirname, 'index.html'),
     inject: 'body',
     hash: false
   })
@@ -90,7 +90,7 @@ module.exports = {
   },
   devtool: 'sourcemap',
   devServer: {
-    contentBase: path.resolve(__dirname, 'build'),
+    contentBase: path.resolve(__dirname, 'dist'),
     compress: true,
     inline: true,
     hot: true,
@@ -103,13 +103,13 @@ module.exports = {
     }
   },
   entry: {
-    app: ['./src/app/root.module.js']
+    app: ['./src/app.module.js']
   },
   output: {
-    filename: '[name].bundle-[hash]-[id].js',
-    chunkFilename: '[name].chunk-[hash]-[id].js',
-    sourceMapFilename: '[name].bundle-[hash]-[id].map',
-    path: path.join(__dirname, 'build')
+    filename: './[name].bundle-[hash]-[id].js',
+    chunkFilename: './[name].chunk-[hash]-[id].js',
+    sourceMapFilename: './[name].bundle-[hash]-[id].map',
+    path: path.join(__dirname, 'dist')
   },
   optimization: {
     splitChunks: {

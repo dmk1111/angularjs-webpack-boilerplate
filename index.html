@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="root" ng-strict-di>
+<html lang="en" ng-app="app-root" ng-strict-di>
   <head>
-    <base href="/app">
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,9 +23,11 @@
   </head>
   <body>
 
-    <root>
-      <div class="loader">Loading...</div>
-    </root>
+  <div class="root">
+      <ui-view>
+        <div class="loader">Loading...</div>
+      </ui-view>
+  </div>
 
   </body>
 </html>
