@@ -7,6 +7,9 @@ import { CommonModule } from './common/common.module';
 
 // components
 import { AppComponent } from './app.component';
+import { MovieInfoComponent } from "./common/components/movie-info/movie-info.component";
+
+import { findMovieById } from "./helpers";
 
 const MODULE_NAME = 'app-root';
 const MODULE_IMPORTS = [
@@ -27,6 +30,18 @@ const _app = angular
         component: AppComponent.selector,
         data: {
           requiredAuth: true
+        }
+      })
+      .state({
+        name: MovieInfoComponent.selector,
+        url: '/movie/{movieId}',
+        template: MovieInfoComponent.template,
+        controller: MovieInfoComponent.controller,
+        controllerAs: '$ctrl',
+        resolve: {
+          movie: ['$stateParams', function($stateParams) {
+            return findMovieById($stateParams.movieId);
+          }]
         }
       });
 
