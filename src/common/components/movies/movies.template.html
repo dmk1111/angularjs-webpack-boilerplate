@@ -1,6 +1,7 @@
 <div class="movies">
   <a ng-repeat="movie in $ctrl.movies track by $index"
      class="movies__overview"
+     fresh-movie
      ui-sref="movie-info({ movieId: movie.id })">
     <h2>{{movie.title}}</h2>
     <div>

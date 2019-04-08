@@ -4,6 +4,7 @@ import angular from 'angular';
 import { AppNavComponent } from './components/app-nav/app-nav.component';
 import { MoviesComponent } from "./components/movies/movies.component";
 import { MovieInfoComponent } from "./components/movie-info/movie-info.component";
+import { FreshMovieDirective } from './directives/fresh-movie.directive';
 
 const MODULE_NAME = 'common';
 const MODULE_IMPORTS = [];
@@ -13,4 +14,5 @@ export const CommonModule = angular
   .component(MovieInfoComponent.selector, MovieInfoComponent)
   .component(AppNavComponent.selector, AppNavComponent)
   .component(MoviesComponent.selector, MoviesComponent)
+  .directive(FreshMovieDirective().name, FreshMovieDirective)
   .name;
