@@ -1,4 +1,5 @@
 import { AppController } from "./app.controller";
+import './app.styles.scss';
 
 export const AppComponent = {
   selector: 'app',

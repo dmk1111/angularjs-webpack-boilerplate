@@ -1,4 +1,5 @@
 import { AppNavController } from "./app-nav.controller";
+import './app-nav.component.scss';
 
 export const AppNavComponent = {
   selector: 'appNav',

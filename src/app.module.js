@@ -4,8 +4,9 @@ import angularLoadingBar from 'angular-loading-bar';
 
 // modules
 import { CommonModule } from './common/common.module';
+
+// components
 import { AppComponent } from './app.component';
-import './app.styles.scss';
 
 const MODULE_NAME = 'app-root';
 const MODULE_IMPORTS = [
