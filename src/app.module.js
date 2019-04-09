@@ -9,7 +9,8 @@ import { CommonModule } from './common/common.module';
 import { AppComponent } from './app.component';
 import { MovieInfoComponent } from "./common/components/movie-info/movie-info.component";
 
-import { findMovieById } from "./helpers";
+// services
+import { MoviesService } from "./common/services/movies.service";
 
 const MODULE_NAME = 'app-root';
 const MODULE_IMPORTS = [
@@ -39,8 +40,8 @@ const _app = angular
         controller: MovieInfoComponent.controller,
         controllerAs: '$ctrl',
         resolve: {
-          movie: ['$stateParams', function($stateParams) {
-            return findMovieById($stateParams.movieId);
+          movie: [MoviesService.serviceName, '$stateParams', function(moviesService, $stateParams) {
+            return moviesService.findMovieById($stateParams.movieId);
           }]
         }
       });

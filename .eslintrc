@@ -13,6 +13,7 @@
     "quotes": "off",
     "global-require": "off",
     "linebreak-style": "off",
-    "no-extra-boolean-cast": "off"
+    "no-extra-boolean-cast": "off",
+    "max-len": ["error", {"code":  140}]
   }
 }
